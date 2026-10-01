@@ -71,7 +71,7 @@
 <tr><td rowspan="3"><b>Información de los métodos de pago</b></td><td>Robo de información de pago (por ejemplo mediante phishing)</td><td>Cifrado de datos, MFA y capacitación en seguridad al personal</td></tr>
 <tr><td>Acceso no autorizado a información de métodos de pago</td><td>Control de acceso por roles (RBAC), mínimo privilegio y auditorías</td></tr>
 <tr><td>Intercepciones durante transacciones o pagos</td><td>Cifrado de las comunicaciones mediante HTTPS/TLS y uso de canales seguros</td></tr>
-<tr><td rowspan="3"><b>Datos de proveedores</b></td><td>Acceso no autorizado a información de proveedores</td><td>Control de acceso basado en roles y mínimo privilegio</td></tr>
+<tr><td rowspan="3"><b>Datos de proveedores</b></td><td>Suplantación de identidad de un proveedor</td><td>Verificación de identidad y autenticación de proveedores</td></tr>
 <tr><td>Modificación/alteración de datos de proveedores</td><td>Control de cambios, validación de datos y auditorías</td></tr>
 <tr><td>Eliminación de información</td><td>Respaldos periódicos y control de permisos</td></tr>
 <tr><td rowspan="3"><b>Código fuente</b></td><td>Robo o filtración del código fuente</td><td>Control de acceso al repositorio y tener repositorios privados</td></tr>
@@ -83,3 +83,18 @@
 <tr><td rowspan="3"><b>Información legal</b></td><td>Acceso no autorizado a contratos y documentos legales</td><td>Control de acceso por roles, cifrado, anonimización de la información y mínimo privilegio</td></tr>
 <tr><td>Modificación o falsificación de documentos legales</td><td>Control de versiones, firma digital y registro de cambios</td></tr>
 <tr><td>Eliminación o pérdida de documentos legales</td><td>Respaldos periódicos, almacenamiento redundante y control de versiones</td></tr>
+<tr><td rowspan="3"><b>Respaldos</b></td><td>Acceso no autorizado a las copias de seguridad</td><td>Cifrado de los respaldos y control de acceso restringido</td></tr>
+<tr><td>Eliminación accidental o intencional de respaldos</td><td>Copias redundantes y almacenamiento protegido contra eliminación</td></tr>
+<tr><td>Corrupción de las copias de seguridad</td><td>Verificación de integridad y pruebas periódicas de restauración</td></tr>
+<tr><td rowspan="3"><b>Historial de compras</b></td><td>Acceso no autorizado al historial de clientes</td><td>Control de acceso basado en roles y permisos</td></tr>
+<tr><td>Modificación no autorizada de registros de compras</td><td>Validación de modificaciones y registros de auditoría, por ejemplo, mediante PostgreSQL Audit</td></tr>
+<tr><td>Pérdida o indisponibilidad del historial de compras</td><td>Respaldos periódicos y mecanismos de recuperación</td></tr>
+<tr><td rowspan="3"><b>Tokens de autenticación</b></td><td>Robo de tokens de autenticación</td><td>Uso de HTTPS, almacenamiento seguro y protección de tokens</td></tr>
+<tr><td>Uso indebido de tokens robados</td><td>Expiración automática y mecanismos de revocación de tokens</td></tr>
+<tr><td>Falsificación o modificación de tokens</td><td>Firmas criptográficas y validación de tokens mediante estándares como JWT</td></tr>
+<tr><td rowspan="3"><b>APIs y claves</b></td><td>Exposición de claves API en repositorios o archivos</td><td>Gestor de secretos y variables de entorno</td></tr>
+<tr><td>Uso no autorizado de las APIs</td><td>Rotación periódica de claves, permisos mínimos y límites de uso con un API Gateway</td></tr>
+<tr><td>Ataques contra las APIs</td><td>Autenticación, autorización, validación de solicitudes y protección mediante API Gateway o WAF</td></tr>
+<tr><td rowspan="3"><b>Registros de auditoría</b></td><td>Acceso no autorizado a los registros</td><td>Control de acceso y permisos restringidos</td></tr>
+<tr><td>Modificación de registros para ocultar actividades</td><td>Almacenamiento inmutable y mecanismos de verificación de integridad</td></tr>
+<tr><td>Eliminación o pérdida de registros</td><td>Copias de seguridad y almacenamiento centralizado de logs</td></tr>
