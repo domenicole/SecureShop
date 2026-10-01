@@ -1,29 +1,29 @@
-**Identificar 15 activos de SecureShop**
-    1. Catálogo
-    2. Credenciales
-    3. Información personal
-    4. Información financiera
-    5. Servidores
-    6. Información de los métodos de pago
-    7. Datos de proveedores
-    8. Código fuente
-    9. Información de procesos y logística 
-    10. Información legal
-    11. Respaldos
-    12. Historial de compras
-    13. Tokens de autenticación
-    14. APIS
-    15. Registros de auditoría
+**Identificar 15 activos de SecureShop**  
+    1. Catálogo  
+    2. Credenciales  
+    3. Información personal  
+    4. Información financiera  
+    5. Servidores  
+    6. Información de los métodos de pago  
+    7. Datos de proveedores  
+    8. Código fuente  
+    9. Información de procesos y logística  
+    10. Información legal  
+    11. Respaldos  
+    12. Historial de compras  
+    13. Tokens de autenticación  
+    14. APIS  
+    15. Registros de auditoría  
     
-**Clasificar cada activo según**
-    1. *Información:* Información personal, Información financiera, Información legal, Información de procesos y logística, Información de los métodos de pago, Respaldos, Historial de Compras, Registros de auditoría.
-    2. *Software:* Código fuente
-    3. *Servicio:* APIs
-    4. *Infrestructura:* Servidores
-    5. *Datos:* Credenciales, Catálogo, Datos de proveedores, Tokens de autenticación. 
+**Clasificar cada activo según**  
+    1. *Información:* Información personal, Información financiera, Información legal, Información de procesos y logística, Información de los métodos de pago, Respaldos, Historial de Compras, Registros de auditoría.  
+    2. *Software:* Código fuente  
+    3. *Servicio:* APIs  
+    4. *Infrestructura:* Servidores  
+    5. *Datos:* Credenciales, Catálogo, Datos de proveedores, Tokens de autenticación.  
     
     
-**¿Qué consecuencias tendría q este activo fuera accedido, modificado o quedara indisponible?**
+**¿Qué consecuencias tendría q este activo fuera accedido, modificado o quedara indisponible?**    
 
 | *Activo* | *Tipo* | *Consecuencia de…* |
 | --- | --- | --- |
@@ -44,5 +44,24 @@
 | *Registros de auditoría*  | Información | *Acceder:* exposición de información sobre actividades y operaciones realizadas en el sistema. *Modificar:* pérdida de confiabilidad de los registros y dificultad para investigar incidentes. *Indisponibilidad:* dificultad para rastrear actividades, detectar incidentes o realizar auditorías.             |
 
 
+**Identificar al menos 3 amenazas de cada activo.**
 
-Todo en un md en una carpeta Documentación → Activos/Amenaza/fecha
+
+<table>
+<thead><tr><th>Activo</th><th>Amenaza</th><th>Mecanismo de control</th></tr></thead>
+<tbody>
+<tr><td rowspan="3"><b>Catálogo</b></td><td>Extracción masiva de datos (scraping) por la competencia</td><td>Límite de peticiones (rate limiting), WAF y detección de bots</td></tr>
+<tr><td>Modificación no autorizada de precios o descripciones</td><td>Control de acceso por roles y registro de cambios</td></tr>
+<tr><td>Ataque DDoS que deja el catálogo inaccesible</td><td>CDN, balanceo de carga y mitigación DDoS</td></tr>
+<tr><td rowspan="3"><b>Credenciales</b></td><td>Phishing para robar credenciales</td><td>Autenticación multifactor (MFA) y capacitación en seguridad</td></tr>
+<tr><td>Fuerza bruta y credential stuffing</td><td>Bloqueo tras intentos fallidos, CAPTCHA y políticas de contraseñas</td></tr>
+<tr><td>Filtración de la base de datos con contraseñas</td><td>Hash con sal (bcrypt/Argon2) y cifrado de la base de datos</td></tr>
+<tr><td rowspan="3"><b>Información personal</b></td><td>Fuga por inyección SQL</td><td>Consultas parametrizadas y validación de entradas</td></tr>
+<tr><td>Acceso indebido de personal interno</td><td>Principio de mínimo privilegio y auditoría de accesos</td></tr>
+<tr><td>Interceptación o robo de datos sin cifrar</td><td>Cifrado en tránsito (TLS) y en reposo (AES-256)</td></tr>
+<tr><td rowspan="3"><b>Información financiera</b></td><td>Alteración fraudulenta de registros</td><td>Segregación de funciones y control de integridad con registro de cambios</td></tr>
+<tr><td>Acceso no autorizado a reportes financieros</td><td>Control de acceso basado en roles y MFA</td></tr>
+<tr><td>Ransomware que cifra la información</td><td>Respaldos offline, antimalware y segmentación de red</td></tr>
+<tr><td rowspan="3"><b>Servidores</b></td><td>Explotación de vulnerabilidades sin parchear</td><td>Gestión de parches y escaneo de vulnerabilidades</td></tr>
+<tr><td>Acceso remoto no autorizado (SSH/RDP)</td><td>MFA, acceso por VPN y restricción por IP</td></tr>
+<tr><td>Falla de hardware o ataque DDoS</td><td>Redundancia, alta disponibilidad y monitoreo</td></tr>
