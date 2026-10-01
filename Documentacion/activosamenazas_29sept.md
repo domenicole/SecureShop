@@ -1,6 +1,6 @@
 1. Crear repo de GitHub
-2. Identificar 10 activos de SecureShop
-    1. Catalogo
+2. Identificar 15 activos de SecureShop
+    1. Catálogo
     2. Credenciales
     3. Información personal
     4. Información financiera
@@ -10,6 +10,11 @@
     8. Código fuente
     9. Información de procesos y logística 
     10. Información legal
+    11. Respaldos
+    12. Historial de compras
+    13. Tokens de autenticación
+    14. APIS y claves
+    15. Registros de auditoría
 3. Clasificar cada activo según:
     1. Información: Información personal, Información financiera, Información legal, Información de procesos y logística, Información de los métodos de pago
     2. Sw: Código fuente
@@ -30,5 +35,6 @@
 | *Código fuente* | Software | *Acceder:* exposición de la implementación y posibles vulnerabilidades del sistema. *Modificar:* introducción de errores o código malicioso. *Indisponibilidad:* dificultad para mantener o actualizar la aplicación. |
 | *Información de procesos y logística* | Información | *Acceder:* exposición de información operativa y logística. *Modificar:* alteración de procesos que puede generar retrasos o errores en entregas. *Indisponibilidad:* dificultad para gestionar pedidos y entregas. |
 | *Información legal* | Información | *Acceder:* exposición de información legal y contractual. *Modificar:* alteración de documentos o información que puede generar problemas legales. *Indisponibilidad:* dificultad para consultar documentos y cumplir obligaciones legales. |
+
 
 Todo en un md en una carpeta Documentación → Activos/Amenaza/fecha
