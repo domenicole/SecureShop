@@ -23,7 +23,8 @@
     5. *Datos:* Credenciales, Catálogo, Datos de proveedores, Tokens de autenticación.  
     
     
-**¿Qué consecuencias tendría q este activo fuera accedido, modificado o quedara indisponible?**    
+**¿Qué consecuencias tendría q este activo fuera accedido, modificado o quedara indisponible?** 
+
 
 | *Activo* | *Tipo* | *Consecuencia de…* |
 | --- | --- | --- |
@@ -46,6 +47,8 @@
 
 **Identificar al menos 3 amenazas de cada activo.**
 
+**Implementar al menos un mecanismo de control para cada amenaza.**
+
 
 <table>
 <thead><tr><th>Activo</th><th>Amenaza</th><th>Mecanismo de control</th></tr></thead>
@@ -65,3 +68,18 @@
 <tr><td rowspan="3"><b>Servidores</b></td><td>Explotación de vulnerabilidades sin parchear</td><td>Gestión de parches y escaneo de vulnerabilidades</td></tr>
 <tr><td>Acceso remoto no autorizado (SSH/RDP)</td><td>MFA, acceso por VPN y restricción por IP</td></tr>
 <tr><td>Falla de hardware o ataque DDoS</td><td>Redundancia, alta disponibilidad y monitoreo</td></tr>
+<tr><td rowspan="3"><b>Información de los métodos de pago</b></td><td>Robo de información de pago (por ejemplo mediante phishing)</td><td>Cifrado de datos, MFA y capacitación en seguridad al personal</td></tr>
+<tr><td>Acceso no autorizado a información de métodos de pago</td><td>Control de acceso por roles (RBAC), mínimo privilegio y auditorías</td></tr>
+<tr><td>Intercepciones durante transacciones o pagos</td><td>Cifrado de las comunicaciones mediante HTTPS/TLS y uso de canales seguros</td></tr>
+<tr><td rowspan="3"><b>Datos de proveedores</b></td><td>Acceso no autorizado a información de proveedores</td><td>Control de acceso basado en roles y mínimo privilegio</td></tr>
+<tr><td>Modificación/alteración de datos de proveedores</td><td>Control de cambios, validación de datos y auditorías</td></tr>
+<tr><td>Eliminación de información</td><td>Respaldos periódicos y control de permisos</td></tr>
+<tr><td rowspan="3"><b>Código fuente</b></td><td>Robo o filtración del código fuente</td><td>Control de acceso al repositorio y tener repositorios privados</td></tr>
+<tr><td>Introducción de código malicioso</td><td>Revisión de código, análisis estático como con SonarQube y control de cambios</td></tr>
+<tr><td>Eliminación del código fuente</td><td>Control de versiones, respaldos y protección de ramas</td></tr>
+<tr><td rowspan="3"><b>Información de procesos y logística</b></td><td>Acceso no autorizado a información operativa</td><td>RBAC, mínimo privilegio y MFA</td></tr>
+<tr><td>Modificación de información de pedidos o entregas</td><td>Validación de datos, control de cambios y auditoría</td></tr>
+<tr><td>Interrupción del sistema de logística</td><td>Alta disponibilidad, monitoreo y sistemas de respaldo</td></tr>
+<tr><td rowspan="3"><b>Información legal</b></td><td>Acceso no autorizado a contratos y documentos legales</td><td>Control de acceso por roles, cifrado, anonimización de la información y mínimo privilegio</td></tr>
+<tr><td>Modificación o falsificación de documentos legales</td><td>Control de versiones, firma digital y registro de cambios</td></tr>
+<tr><td>Eliminación o pérdida de documentos legales</td><td>Respaldos periódicos, almacenamiento redundante y control de versiones</td></tr>
